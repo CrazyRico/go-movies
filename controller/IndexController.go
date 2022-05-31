@@ -14,9 +14,9 @@ import (
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	show := make(map[string]interface{})
 
-	NewFilmKey := "detail_links:id:1"
-	NewTVKey := "detail_links:id:3"
-	NewCartoonKey := "detail_links:id:24"
+	NewFilmKey := "detail_links:id:6"
+	NewTVKey := "detail_links:id:22"
+	NewCartoonKey := "detail_links:id:31"
 	NewFilm := services.MovieListsRange(NewFilmKey, 0, 14)
 	NewTV := services.MovieListsRange(NewTVKey, 0, 14)
 	NewCartoon := services.MovieListsRange(NewCartoonKey, 0, 14)
