@@ -137,6 +137,9 @@ http://127.0.0.1:8899
 gox -osarch="windows/amd64" -ldflags "-s -w" -gcflags="all=-trimpath=${PWD}" -asmflags="all=-trimpath=${PWD}"
 gox -osarch="darwin/amd64" -ldflags "-s -w" -gcflags="all=-trimpath=${PWD}" -asmflags="all=-trimpath=${PWD}"
 gox -osarch="linux/amd64" -ldflags "-s -w" -gcflags="all=-trimpath=${PWD}" -asmflags="all=-trimpath=${PWD}"
+
+# gf编译
+gf build main.go -n go_movies_linux_amd64 -a amd64 -s linux -p .
 ```
 
 - 提供win64的已编译的文件下载 [release](https://github.com/hezhizheng/go-movies/releases)
