@@ -641,8 +641,8 @@ func SendDingMsg(msg string) {
 	webhook := "https://oapi.dingtalk.com/robot/send?access_token=" + accessToken
 	robot := utils.NewRobot(webhook)
 
-	title := "goMovies 爬虫通知API"
-	text := "#### goMovies 爬虫通知API  \n " + msg
+	title := "Moviehub 爬虫通知API"
+	text := "#### Moviehub 爬虫通知API  \n " + msg
 	atMobiles := []string{""}
 	isAtAll := true
 
