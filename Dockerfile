@@ -10,4 +10,6 @@ RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
 WORKDIR /app/go-movies
 COPY . /app/go-movies
 
-CMD ["./go_movies_linux_amd64"]
+RUN chmod 777 ./linux_amd64/go_movies_linux_amd64
+
+CMD ["./linux_amd64/go_movies_linux_amd64"]
