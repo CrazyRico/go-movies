@@ -164,6 +164,9 @@ sudo docker run -itd --name redis-test -p 6379:6379 redis
 # 编译go-movies
 gox -osarch="linux/amd64" -ldflags "-s -w" -gcflags="all=-trimpath=${PWD}" -asmflags="all=-trimpath=${PWD}"
 
+#下载rootfs.tar.xz
+wget -O rootfs.tar.xz https://github.com/debuerreotype/docker-debian-artifacts/raw/b024a792c752a5c6ccc422152ab0fd7197ae8860/jessie/rootfs.tar.xz
+
 # 构造镜像
 sudo docker build -t go-movies-docker-scratch .
 

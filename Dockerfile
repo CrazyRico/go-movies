@@ -1,7 +1,8 @@
 FROM scratch
 
-WORKDIR $GOPATH/src/github.com/hezhizheng/go-movies
-COPY . $GOPATH/src/github.com/hezhizheng/go-movies
+ADD rootfs.tar.xz /
 
-#EXPOSE 8000, 默认直接使用编译好的端口
-CMD ["./linux_amd64/go_movies_linux_amd64"]
+WORKDIR /app/go-movies
+COPY ./linux_amd64/go_movies_linux_amd64 /app/go-movies
+
+CMD ["./go_movies_linux_amd64"]
